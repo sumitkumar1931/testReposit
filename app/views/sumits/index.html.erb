@@ -1,0 +1,33 @@
+<h1>Listing sumits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Published on</th>
+      <th>Tags</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sumits.each do |sumit| %>
+      <tr>
+        <td><%= sumit.name %></td>
+        <td><%= sumit.content %></td>
+        <td><%= sumit.published_on %></td>
+        <td><%= sumit.tags %></td>
+        <td><%= link_to 'Show', sumit %></td>
+        <td><%= link_to 'Edit', edit_sumit_path(sumit) %></td>
+        <td><%= link_to 'Destroy', sumit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sumit', new_sumit_path %>

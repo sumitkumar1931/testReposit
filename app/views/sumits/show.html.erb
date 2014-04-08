@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sumit.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @sumit.content %>
+</p>
+
+<p>
+  <strong>Published on:</strong>
+  <%= @sumit.published_on %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @sumit.tags %>
+</p>
+
+<%= link_to 'Edit', edit_sumit_path(@sumit) %> |
+<%= link_to 'Back', sumits_path %>
