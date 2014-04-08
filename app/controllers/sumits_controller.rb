@@ -42,7 +42,7 @@ class SumitsController < ApplicationController
   def update
     respond_to do |format|
       if @sumit.update(sumit_params)
-        format.html { redirect_to @sumit, notice: 'Sumit was successfully updated.' }
+        format.html { redirect_to @sumit, notice: 'Sumit is successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
