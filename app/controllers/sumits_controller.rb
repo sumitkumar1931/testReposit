@@ -28,11 +28,15 @@ class SumitsController < ApplicationController
 
     respond_to do |format|
       if @sumit.save
-        format.html { redirect_to @sumit, notice: 'Sumit was successfully created.' }
+        format.html { redirect_to @sumit, notice: 'Sumit is successfully created.' }
         format.json { render action: 'show', status: :created, location: @sumit }
       else
         format.html { render action: 'new' }
         format.json { render json: @sumit.errors, status: :unprocessable_entity }
+
+
+
+        
       end
     end
   end
@@ -42,7 +46,7 @@ class SumitsController < ApplicationController
   def update
     respond_to do |format|
       if @sumit.update(sumit_params)
-        format.html { redirect_to @sumit, notice: 'Sumit was successfully updated.' }
+        format.html { redirect_to @sumit, notice: 'Sumit is successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
