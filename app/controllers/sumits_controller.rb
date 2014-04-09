@@ -10,7 +10,7 @@ class SumitsController < ApplicationController
   # GET /sumits/1
   # GET /sumits/1.json
   def show
-  end
+ end
 
   # GET /sumits/new
   def new
